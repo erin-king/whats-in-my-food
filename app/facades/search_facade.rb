@@ -4,7 +4,6 @@ class SearchFacade
   end
 
   def foods
-
     food_results[:item].map do |food_data|
       Food.new(food_data)
     end
@@ -21,7 +20,7 @@ class SearchFacade
   end
 
   def food_results
-    @_food_results ||= service.get_foods(@criteria)  
+    @_food_results ||= service.get_foods(@criteria)
   end
 
 end
