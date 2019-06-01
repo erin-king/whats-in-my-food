@@ -10,7 +10,7 @@ class SearchFacade
   end
 
   def food_count
-    "#{foods.count} Items"
+    "#{food_results[:total]} Items"
   end
 
   private
@@ -22,6 +22,4 @@ class SearchFacade
   def food_results
     @_food_results ||= service.get_foods(@criteria)
   end
-
 end
-# DON'T FORGET FOOD_COUNT!!! AND TEST LINE 14-16
