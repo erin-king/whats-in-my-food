@@ -9,6 +9,7 @@ describe Food, type: :model do
       ds: "LI",
       manu: "Amazonas Imports, Inc."
     }
+
     food = Food.new(attributes)
 
     expect(food.food_group).to eq(attributes[:group])
