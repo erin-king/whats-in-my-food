@@ -4,7 +4,6 @@ class SearchFacade
   end
 
   def foods
-    food_results = service.get_foods(@criteria)
 
     food_results[:item].map do |food_data|
       Food.new(food_data)
@@ -18,7 +17,12 @@ class SearchFacade
   private
 
   def service
-    @_service ||= UsdaService.new  
+    @_service ||= UsdaService.new
   end
+
+  def food_results
+    @_food_results ||= service.get_foods(@criteria)  
+  end
+
 end
 # DON'T FORGET FOOD_COUNT!!! AND TEST LINE 14-16
