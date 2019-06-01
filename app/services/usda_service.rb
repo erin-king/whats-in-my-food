@@ -6,7 +6,6 @@ class UsdaService
     end
     response = conn.get("?format=json&q=#{criteria}&sort=n&max=10&offset=0")
     food_results = JSON.parse(response.body, symbolize_names: true)[:list]
-    # binding.pry
   end
 
 

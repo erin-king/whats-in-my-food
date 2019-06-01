@@ -15,8 +15,8 @@ describe 'As a user' do
     #   expect(page).to have_content('531 Items')
     # end
     # Then I should see a list of ten foods sorted by relevance.
-    expect(page).to have_css('.results', count: 10)
-    within ".results" do
+    expect(page).to have_css('.result', count: 10)
+    within(first(".result")) do
       expect(page).to have_content("NDB Number")
       expect(page).to have_content("Name")
       expect(page).to have_content("Group")

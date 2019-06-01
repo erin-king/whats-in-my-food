@@ -5,7 +5,7 @@ describe UsdaService do
     it 'get_foods' do
       service = UsdaService.new
       results = service.get_foods('sweet potatoes')
-      expect(results[:list][:total]).to eq(531)
+      expect(results[:total]).to eq(531)
     end
   end
 end
